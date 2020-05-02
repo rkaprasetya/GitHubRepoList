@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/repoListFragment">
+
+    <fragment
+        android:id="@+id/repoListFragment"
+        android:name="com.raka.repositorieslistgithub.presentation.repolist.RepoListFragment"
+        android:label="fragment_repo_list"
+        tools:layout="@layout/fragment_repo_list" >
+        <action
+            android:id="@+id/action_repoListFragment_to_searchRepoFragment"
+            app:destination="@id/searchRepoFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+           />
+        <action
+            android:id="@+id/action_repoListFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <!--For login, to not go back-->
+<!--            app:popUpTo="@id/repoListFragment"-->
+<!--            app:popUpToInclusive="true"-->
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchRepoFragment"
+        android:name="com.raka.repositorieslistgithub.presentation.searchrepo.SearchRepoFragment"
+        android:label="fragment_search_repo"
+        tools:layout="@layout/fragment_search_repo" >
+        <argument
+            android:name="searchKeyword"
+            app:argType="string"
+             />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.raka.repositorieslistgithub.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+
+        <action
+            android:id="@+id/action_profileFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.raka.repositorieslistgithub.presentation.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

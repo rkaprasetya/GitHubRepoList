@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">RepositoriesListGithub</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="login_form">Login Form</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_fail">Login Fail</string>
+    <string name="login_success">Login Success</string>
+    <string name="username_empty">Username is empty</string>
+    <string name="wrong_email">Email format is wrong</string>
+    <string name="password_empty">Password is empty</string>
+    <string name="search_category">Search Category</string>
+    <string name="this_is_profile_page">This is Profile page</string>
+    <string name="this_is_setting_page">This is Setting page</string>
+    <string name="setting">Setting</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+</resources>

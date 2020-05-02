@@ -1,0 +1,19 @@
+{
+  "data": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dCJdLCJ1c2VyX25hbWUiOiJya2EucHJhc2V0eWFAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiQ1VTVE9NRVIiXSwianRpIjoiMzc3NDdhZWQtN2Q4ZC00OWMwLWEyYzMtNjljNTczODU4YjEwIiwiY2xpZW50X2lkIjoiY2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIiwidHJ1c3QiXX0.ZZgG61F6H4cYmvhm6ilUHYQEXV9Ey8CVHw4IdI6Q3Hc",
+    "dob": "10-Jan-1959",
+    "nik": "3171011001590010",
+    "hasContract": "",
+    "role": "",
+    "forceChangePassword": "false",
+    "type": "CUSTOMER",
+    "customerId": "131907",
+    "dealerId": "",
+    "userId": "117290",
+    "username": "AhmadJakshahshshsjsj",
+    "email": "rka.prasetya@gmail.com",
+    "dealerName": " ",
+    "responseCode": "00",
+    "responseDescription": "Success"
+  }
+}

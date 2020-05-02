@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    defaultConfig {
+        applicationId "com.raka.repositorieslistgithub"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "com.raka.repositorieslistgithub.MockTestRunner"
+        //  testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    //For testing RecyclerView
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$rootProject.appCompat"
+    implementation "androidx.core:core-ktx:$rootProject.coreKtx"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
+    implementation "com.google.android.material:material:$rootProject.materialDesign"
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit"
+    //rx-java
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJava"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit"
+    implementation "com.android.support:design:$rootProject.design"
+    implementation "com.android.support:recyclerview-v7:$rootProject.recyclerView"
+    //glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.glide"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "com.github.bumptech.glide:compiler:$rootProject.glide"
+    implementation "com.squareup.picasso:picasso:$rootProject.picasso"
+    //room
+    implementation "androidx.room:room-runtime:$rootProject.room"
+    kapt "androidx.room:room-compiler:$rootProject.room"
+    implementation "android.arch.persistence.room:rxjava2:$rootProject.persistenceRoom"
+    implementation "androidx.room:room-rxjava2:$rootProject.room"
+    implementation "com.google.code.gson:gson:$rootProject.gson"
+    implementation "androidx.room:room-ktx:$rootProject.room"
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutine"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutine"
+    //
+    implementation "com.itkacher.okhttpprofiler:okhttpprofiler:$rootProject.okHttpProfiler"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingInterceptor"
+    implementation "android.arch.work:work-runtime-ktx:$rootProject.workRuntime"
+    // Dagger
+    kapt "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion"
+    //Navigation Component
+    implementation "android.arch.navigation:navigation-fragment:$rootProject.navComponentVersion"
+    implementation "android.arch.navigation:navigation-ui:$rootProject.navComponentVersion"
+    implementation "android.arch.navigation:navigation-runtime-ktx:$rootProject.navComponentVersion"
+
+    implementation "com.google.dagger:dagger:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
+
+    //tutorial for navigationresult library
+    //https://github.com/PHELAT/NavigationResult
+    //https://android.jlelse.eu/navigateup-with-bundle-c595ff6d91ba
+    implementation "com.phelat:navigationresult:1.0.0"
+
+    testImplementation "junit:junit:$rootProject.jUnit"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$rootProject.mockwebserverVersion"
+    testImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    //UITest
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:$rootProject.mockwebserverVersion"
+    androidTestImplementation "androidx.test.ext:truth:$rootProject.testRuleUi"
+    androidTestImplementation "androidx.test:runner:$rootProject.testRuleUi"
+    androidTestImplementation "androidx.test:rules:$rootProject.testRuleUi"
+    androidTestImplementation "androidx.test.ext:junit:$rootProject.jUnitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"
+    androidTestImplementation('com.android.support.test.espresso:espresso-contrib:3.0.2') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'design'
+        exclude module: 'recyclerview-v7'
+    }
+}
